@@ -1,12 +1,23 @@
-FROM tensorflow/tensorflow:2.15.0
+FROM python:3.11-slim
 
-WORKDIR /src
+# Instala dependências do sistema necessárias
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
 
+# Define o diretório de trabalho
+WORKDIR /app
+
+# Copia os arquivos da aplicação para o container
 COPY . .
 
+# Instala as dependências do Python
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt \
+    && pip install --no-cache-dir tensorflow==2.19.0
 
-RUN pip install --no-cache-dir --ignore-installed -r requirements.txt
+# Expõe a porta padrão do Flask
+EXPOSE 5000
 
-COPY . .
-
+# Comando para rodar a aplicação
 CMD ["python", "run.py"]
