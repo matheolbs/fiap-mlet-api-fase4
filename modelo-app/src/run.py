@@ -32,7 +32,7 @@ def predict():
 
     return jsonify({'prediction': float(prediction[0][0])})
 
-@app.route('/health-check', methods=['POST'])
+@app.route('/health-check', methods=['GET'])
 def health_check():
     return jsonify({'status': 'healthy'})
 
