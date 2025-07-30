@@ -1,12 +1,14 @@
-<p align="center">
-  <img src="arquitetura.svg" alt="Arquitetura do Projeto" width="600"/>
-</p>
+
 
 # fiap-mlet-api-fase4
 
 ## Visão Geral
 
 Este projeto faz parte da entrega da disciplina de Machine Learning Engineering da FIAP, com o objetivo de construir, treinar e disponibilizar uma API para predição de séries temporais utilizando redes neurais LSTM (Long Short-Term Memory). O foco principal está na construção do modelo, desde a preparação dos dados até a implementação e disponibilização do modelo treinado.
+
+<p align="center">
+  <img src="arquitetura.svg" alt="Arquitetura do Projeto" width="600"/>
+</p>
 
 ## Estrutura do Projeto
 
