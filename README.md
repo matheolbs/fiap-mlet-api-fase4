@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="arquitetura.svg" alt="Arquitetura do Projeto" width="600"/>
+</p>
+
 # fiap-mlet-api-fase4
 
 ## Visão Geral
